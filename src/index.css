@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/public/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url('/public/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'semibold';
+  src: url('/public/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins{
+     font-family: 'Poppins', sans-serif !important;
+}
+
+
+.poppins-medium {
+  font-family: 'medium', sans-serif;
+}
+.poppins-semibold {
+  font-family: 'semibold', sans-serif;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+
+@keyframes float {
+  100%{
+    transform: translateY(0px);
+  }
+  0%{
+    transform: translateY(170px);
+  }
+}
+
+.animate-float {
+  animation: float 0.8s ease;
+}
