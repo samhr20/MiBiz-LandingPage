@@ -1,54 +1,55 @@
-  import React, { useState } from 'react'
-  import Navbar from './Components/Navbar'
-  import HeroSection from './Components/HeroSection'
-  import VideoSection from './Components/VideoSection'
-  import Footer from './Components/Footer'
-  import Contact from './Components/Contact'
-  import Plans from './Components/Plans'
-  import { useEffect } from 'react'
-  import axios from 'axios'
+import React, { useState } from 'react'
+import Navbar from './Components/Navbar'
+import HeroSection from './Components/HeroSection'
+import VideoSection from './Components/VideoSection'
+import Footer from './Components/Footer'
+import Contact from './Components/Contact'
+import Plans from './Components/Plans'
+import { useEffect } from 'react'
+import axios from 'axios'
+import  Features  from './Components/Features'
 
-  const App = () => {
+const App = () => {
 
-    const [SubPlans, setSubPlans] = useState([])
+  const [SubPlans, setSubPlans] = useState([])
 
-    useEffect(() => {
+  useEffect(() => {
 
-      const fetchData = async () => {
-        try {
-          const res = await axios.get("http://localhost:3000/subscriptionPlans")
-          setSubPlans(res.data)
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/subscriptionPlans")
+        setSubPlans(res.data)
 
-        } catch (error) {
-          console.error(error);
+      } catch (error) {
+        console.error(error);
 
-        }
       }
+    }
 
-      fetchData()
+    fetchData()
 
-    }, [])
+  }, [])
 
 
-    return (
-      <div className=" poppins ">
+  return (
+    <div className=" poppins ">
 
-        <div className="max-w-[1920px] ">
-          <Navbar />
-          <HeroSection />
-          <VideoSection />
-          {/* Features */}
-          {/* App Preview */}
-          <Plans SubPlans={SubPlans} />
-          {/* About Application */}
-          {/* Testimonials */}
-          {/* FAQ */}
-          <Contact/>
-          <Footer />
-        </div>
-
+      <div className="max-w-[1920px] ">
+        <Navbar />
+        <HeroSection />
+        <VideoSection />
+        <Features />
+        {/* App Preview */}
+        <Plans SubPlans={SubPlans} />x  
+        {/* About Application */}
+        {/* Testimonials */}
+        {/* Faq */}
+        <Contact />
+        <Footer />
       </div>
-    )
-  }
 
-  export default App
+    </div>
+  )
+}
+
+export default App
