@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Button = ({text}) => {
+const Button = ({ text }) => {
   return (
-   <button className="bg-[#5A2A82] poppins-medium text-white h-[52px] rounded-lg p-2.5 flex gap-2 items-center justify-center text-[18px] pointer">{text}</button>
+    <button className="bg-[#5A2A82] text-white poppins-medium text-[18px] h-[52px] rounded-lg px-6 flex items-center justify-center transition-all duration-300 hover:bg-[#4a2470] pointer">
+      {text}
+    </button>
   )
 }
 

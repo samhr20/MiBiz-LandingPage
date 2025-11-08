@@ -1,13 +1,23 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "subscriptionPlans":[
+    {
+      "timePeriod" : "Monthly",
+      "popular": false ,
+      "pricing" : 99,
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l",
+      "title1" : "elit, sed do eiusmod t",
+      "label1":"elit, sed do eiusmod tempor incididunt ut l",
+      "title2":"elit, sed do eiusmod t",
+      "label2":"elit, sed do eiusmod tempor incididunt ut l"  
+    },
+    {
+      "timePeriod" : "Yearly",
+      "popular": true ,
+      "pricing" : 999,
+      "description" : "If you have a Growing business you can use Our Business Plan to Benefit with all of our Features.",
+      "label1":"elit, sed do eiusmod tempor incididunt ut l",
+      "title2":"elit, sed do eiusmod t",
+      "label2":"elit, sed do eiusmod tempor incididunt ut l"  
+    }
+  ]
 }

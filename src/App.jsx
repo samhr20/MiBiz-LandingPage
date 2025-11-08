@@ -1,22 +1,54 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import HeroSection from './Components/HeroSection'
-import VideoSection from './Components/VideoSection'
+  import React, { useState } from 'react'
+  import Navbar from './Components/Navbar'
+  import HeroSection from './Components/HeroSection'
+  import VideoSection from './Components/VideoSection'
+  import Footer from './Components/Footer'
+  import Contact from './Components/Contact'
+  import Plans from './Components/Plans'
+  import { useEffect } from 'react'
+  import axios from 'axios'
 
-const App = () => {
-  return (
-    <div className=" poppins ">
+  const App = () => {
 
-      {/* Container */}
+    const [SubPlans, setSubPlans] = useState([])
 
-      <div className="max-w-[1920px] ">
-        <Navbar />
-        <HeroSection />
-        <VideoSection />
+    useEffect(() => {
+
+      const fetchData = async () => {
+        try {
+          const res = await axios.get("http://localhost:3000/subscriptionPlans")
+          setSubPlans(res.data)
+
+        } catch (error) {
+          console.error(error);
+
+        }
+      }
+
+      fetchData()
+
+    }, [])
+
+
+    return (
+      <div className=" poppins ">
+
+        <div className="max-w-[1920px] ">
+          <Navbar />
+          <HeroSection />
+          <VideoSection />
+          {/* Features */}
+          {/* App Preview */}
+          <Plans SubPlans={SubPlans} />
+          {/* About Application */}
+          {/* Testimonials */}
+          {/* FAQ */}
+          <Contact/>
+          <Footer />
+        </div>
+
       </div>
-     
-    </div>
-  )
-}
+    )
+  }
 
-export default App
+  export default App
