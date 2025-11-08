@@ -1,24 +1,88 @@
 {
-  "subscriptionPlans":[
+  "subscriptionPlans": [
     {
-      "timePeriod" : "Monthly",
-      "popular": false ,
-      "pricing" : 99,
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l",
-      "title1" : "elit, sed do eiusmod t",
-      "label1":"elit, sed do eiusmod tempor incididunt ut l",
-      "title2":"elit, sed do eiusmod t",
-      "label2":"elit, sed do eiusmod tempor incididunt ut l"  
+      "timePeriod": "Monthly",
+      "popular": false,
+      "pricing": 99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l",
+      "title1": "elit, sed do eiusmod t",
+      "label1": "elit, sed do eiusmod tempor incididunt ut l",
+      "title2": "elit, sed do eiusmod t",
+      "label2": "elit, sed do eiusmod tempor incididunt ut l"
     },
     {
-      "timePeriod" : "Yearly",
-      "popular": true ,
-      "pricing" : 999,
-      "description" : "If you have a Growing business you can use Our Business Plan to Benefit with all of our Features.",
-       "title1" : "elit, sed do eiusmod t",
-      "label1":"elit, sed do eiusmod tempor incididunt ut l",
-      "title2":"elit, sed do eiusmod t",
-      "label2":"elit, sed do eiusmod tempor incididunt ut l"  
+      "timePeriod": "Yearly",
+      "popular": true,
+      "pricing": 999,
+      "description": "If you have a Growing business you can use Our Business Plan to Benefit with all of our Features.",
+      "title1": "elit, sed do eiusmod t",
+      "label1": "elit, sed do eiusmod tempor incididunt ut l",
+      "title2": "elit, sed do eiusmod t",
+      "label2": "elit, sed do eiusmod tempor incididunt ut l"
+    }
+  ],
+  "faq": [
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nisl ",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    },
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nies",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    },
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    },
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nisl proin ies",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    },
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    },
+    {
+      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna en",
+      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    }
+  ],
+  "testimonials" :[
+    {
+      "Stars" : 5,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User1.png",
+      "UserName" : "Darrell Steward"
+    },
+    {
+      "Stars" : 5,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User2.png",
+      "UserName" : "Wade Warren"
+    },
+    {
+      "Stars" : 5,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User3.png",
+      "UserName" : "Guy Hawkins"
+    },
+    {
+      "Stars" : 5,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User3.png",
+      "UserName" : "Shubham Saini"
+    },
+    {
+      "Stars" : 5,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User2.png",
+      "UserName" : "Manish Verma"
+    },
+    {
+      "Stars" : 4,
+      "Feedback" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies cras pellentesque feugiat feugiat purus tincidunt in eu est tristique nisi viverra fermentum urna in scelerisque diam tincidun",
+      "UserImage" : "/User1.png",
+      "UserName" : "Lalit Saini"
     }
   ]
 }

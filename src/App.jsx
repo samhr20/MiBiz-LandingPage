@@ -8,17 +8,26 @@ import Plans from './Components/Plans'
 import { useEffect } from 'react'
 import axios from 'axios'
 import  Features  from './Components/Features'
+import Faq from './Components/Faq'
+import About from './Components/About'
+import Testimonials from './Components/Testimonials'
 
 const App = () => {
 
   const [SubPlans, setSubPlans] = useState([])
+  const [Faqs, setFaqs] = useState([])
+  const [Testimonial, setTestimonial] = useState([])
 
   useEffect(() => {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/subscriptionPlans")
-        setSubPlans(res.data)
+        const plans = await axios.get("http://localhost:3000/subscriptionPlans")
+        const faqs = await axios.get("http://localhost:3000/faq")
+        const testimonials = await axios.get("http://localhost:3000/testimonials")
+        setSubPlans(plans.data)
+        setFaqs(faqs.data)
+        setTestimonial(testimonials.data)
 
       } catch (error) {
         console.error(error);
@@ -40,10 +49,10 @@ const App = () => {
         <VideoSection />
         <Features />
         {/* App Preview */}
-        <Plans SubPlans={SubPlans} />x  
-        {/* About Application */}
-        {/* Testimonials */}
-        {/* Faq */}
+        <Plans SubPlans={SubPlans} />
+        <About/>
+        <Testimonials Testimonial={Testimonial}/>
+        <Faq faq={Faqs} />
         <Contact />
         <Footer />
       </div>

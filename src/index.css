@@ -19,17 +19,34 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: 'DmSans';
+  src: url('/src/assets/fonts/DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DmSans-medium';
+  src: url('/src/assets/fonts/DMSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 .poppins{
      font-family: 'Poppins', sans-serif !important;
 }
-
 
 .poppins-medium {
   font-family: 'medium', sans-serif;
 }
 .poppins-semibold {
   font-family: 'semibold', sans-serif;
+}
+.dmSans{
+  font-family: 'DmSans' , sans-serif;
+}
+.dmSans-medium{
+  font-family: 'dmSans-medium' , sans-serif;
 }
 
 .pointer{
