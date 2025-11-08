@@ -1,5 +1,5 @@
 import React from "react";
-import Video from '../../public/svg/Video.svg?react'
+import Video from '../assets/svg/Video.svg?react'
 
 const VideoSection = () => {
     return (

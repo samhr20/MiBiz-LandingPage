@@ -1,7 +1,7 @@
 import React from "react";
-import PlayStore from '../../public/svg/PlayStore.svg?react'
-import AppStore from '../../public/svg/AppStore.svg?react'
-import HeroPhones from '../../public/svg/HeroPhones.svg?react'
+import PlayStore from '../assets/svg/PlayStore.svg?react'
+import AppStore from '../assets/svg/AppStore.svg?react'
+import HeroPhones from '../assets/svg/HeroPhones.svg?react'
 
 const HeroSection = () => {
     return (

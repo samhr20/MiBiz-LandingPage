@@ -2,20 +2,20 @@
 
 @font-face {
   font-family: 'poppins';
-  src: url('/public/fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('/src/assets/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'medium';
-  src: url('/public/fonts/Poppins-Medium.ttf') format('truetype');
+  src: url('/src/assets/fonts/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'semibold';
-  src: url('/public/fonts/Poppins-SemiBold.ttf') format('truetype');
+  src: url('/src/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }

@@ -11,12 +11,10 @@ const App = () => {
 
       <div className="max-w-[1920px] ">
         <Navbar />
-        <HeroSection/>
-        <VideoSection/>
+        <HeroSection />
+        <VideoSection />
       </div>
-<div>
-  
-</div>
+     
     </div>
   )
 }
