@@ -14,7 +14,9 @@ const App = () => {
         <HeroSection/>
         <VideoSection/>
       </div>
-
+<div>
+  
+</div>
     </div>
   )
 }
