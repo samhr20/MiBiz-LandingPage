@@ -11,6 +11,7 @@ import  Features  from './Components/Features'
 import Faq from './Components/Faq'
 import About from './Components/About'
 import Testimonials from './Components/Testimonials'
+import AppPreview from './Components/AppPreview'
 
 const App = () => {
 
@@ -41,14 +42,14 @@ const App = () => {
 
 
   return (
-    <div className=" poppins ">
+    <div className=" poppins overflow-x-hidden">
 
       <div className="max-w-[1920px] ">
         <Navbar />
         <HeroSection />
         <VideoSection />
         <Features />
-        {/* App Preview */}
+        <AppPreview/>
         <Plans SubPlans={SubPlans} />
         <About/>
         <Testimonials Testimonial={Testimonial}/>
