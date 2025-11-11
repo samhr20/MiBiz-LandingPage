@@ -1,7 +1,5 @@
 import React from 'react'
-import Email from '../assets/svg/Email.svg?react'
-import Chat from '../assets/svg/Chat.svg?react'
-import Support from '../assets/svg/Support.svg?react'
+
 import Button from './Button'
 
 const Contact = () => {
@@ -22,7 +20,7 @@ const Contact = () => {
             <div className="flex flex-col gap-3.5">
               <item.icon className="w-[58px] h-[58px]" />
               <p className="poppins-medium text-[26px]">{item.Text}</p>
-              <p className="text-[18px] text-[#838383]">{item.label}</p>
+              <p className="text-[16px] text-[#838383]">{item.label}</p>
             </div>
             <div className="pt-5">
               <Button text={item.btnText} />

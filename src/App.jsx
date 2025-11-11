@@ -7,7 +7,7 @@ import Contact from './Components/Contact'
 import Plans from './Components/Plans'
 import { useEffect } from 'react'
 import axios from 'axios'
-import  Features  from './Components/Features'
+import Features from './Components/Features'
 import Faq from './Components/Faq'
 import About from './Components/About'
 import Testimonials from './Components/Testimonials'
@@ -42,23 +42,28 @@ const App = () => {
 
 
   return (
-    <div className=" poppins overflow-x-hidden">
+    <div className=" poppins ">
 
-      <div className="max-w-[1920px] ">
+      <div className="overflow-x-hidden ">
         <Navbar />
         <HeroSection />
-        <VideoSection />
+        <About />
+        {/* <VideoSection /> */}
         <Features />
-        <AppPreview/>
+        {/* <AppPreview/> */}
+        <Testimonials Testimonial={Testimonial} />
         <Plans SubPlans={SubPlans} />
-        <About/>
-        <Testimonials Testimonial={Testimonial}/>
         <Faq faq={Faqs} />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </div>
 
+
+   
     </div>
+
+
+
   )
 }
 
