@@ -32,13 +32,13 @@ const Features = () => {
     ]
 
     return (
-        <section className='bg-[#F6F4FF] py-[120px] px-60 flex flex-col items-center'>
+        <section className='bg-[#F6F4FF] py-[120px] px-60 flex flex-col items-center relative'>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className='bg-white rounded-[40px] py-[100px] flex gap-[60px] flex-col items-center w-[1440px]'
+                className='bg-white rounded-[40px] z-30 py-[100px] flex gap-[60px] flex-col items-center w-[1440px]'
             >
                 <motion.p
                     initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -92,6 +92,20 @@ const Features = () => {
                     })}
                 </div>
             </motion.div>
+            <div   className='absolute -bottom-25 z-0 w-screen flex items-center'>
+
+              <img src="/Union.png" 
+         alt="" />
+
+              <img src="/Union.png" 
+         alt="" />
+
+              <img src="/Union.png" 
+         alt="" />
+
+              <img src="/Union.png" 
+         alt="" />
+          </div>
         </section>
     )
 }

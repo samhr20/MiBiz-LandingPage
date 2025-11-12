@@ -14,6 +14,8 @@ const HeroSection = () => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-[#0F001BA6]"></div>
 
+
+            {/* Phone image */}
             <motion.div
                 initial={{ opacity: 0, y: 150, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}

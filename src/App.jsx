@@ -50,7 +50,7 @@ const App = () => {
         <About />
         {/* <VideoSection /> */}
         <Features />
-        {/* <AppPreview/> */}
+        <AppPreview/>
         <Testimonials Testimonial={Testimonial} />
         <Plans SubPlans={SubPlans} />
         <Faq faq={Faqs} />
@@ -65,6 +65,10 @@ const App = () => {
 
 
   )
+
+
+
+  
 }
 
 export default App

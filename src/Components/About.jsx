@@ -6,7 +6,14 @@ import GetPro2 from '../assets/svg/GetPro2.svg?react'
 
 const About = () => {
     return (
-        <section className='bg-[#F6F4FF] w-screen py-[120px] text-black flex items-center justify-center '>
+        <section className='bg-[#F6F4FF] relative w-screen py-[120px] text-black flex items-center justify-center '>
+            <div className='absolute top-0 z-0 w-screen flex items-center  ' >
+                <img src="/Union.png"
+                    alt="" />
+                <img src="/Union.png" alt="" />
+                <img src="/Union.png" alt="" />
+                <img src="/Union.png"     alt="" />
+          </div>
             <div className='flex items-center justify-between'>
                 <div className='flex items-center justify-between gap-[72px] h-[636px]'>
                     

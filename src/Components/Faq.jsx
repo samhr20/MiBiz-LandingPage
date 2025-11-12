@@ -37,8 +37,8 @@ const Faq = ({ faq }) => {
     }
   ]
     return (
-        <section className='bg-[#F6F4FF] text-black w-screen py-[120px] pb-[250px] flex items-center justify-center'>
-            <div className='flex items-center justify-between flex-col gap-[45px]'>
+        <section className='bg-[#F6F4FF] relative text-black w-screen py-[120px] pb-[250px] flex items-center justify-center'>
+            <div className='flex items-center z-30 justify-between flex-col gap-[45px]'>
                 <p className='poppins-semibold text-[52px]'>Frequently Asked Questions</p>
 
                 <div className='flex flex-col items-center justify-between gap-5'>
@@ -65,6 +65,20 @@ const Faq = ({ faq }) => {
                     ))}
                 </div>
             </div>
+            <div className='absolute -bottom-50 z-0 w-screen flex items-center'>
+
+             <img src="/Union.png" 
+          alt="" />
+
+             <img src="/Union.png" 
+          alt="" />
+
+             <img src="/Union.png" 
+          alt="" />
+
+             <img src="/Union.png" 
+          alt="" />
+          </div>
         </section>
     )
 }
