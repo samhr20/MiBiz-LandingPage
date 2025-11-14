@@ -1,43 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Minus from '../assets/svg/Minus.svg?react'
 import Plus from '../assets/svg/Plus.svg?react'
 import FaqsEnum from '../helpers/FaqsEnum'
+import calls  from "../call_handler/supabase_calls";
 
-const Faq = ({ faq }) => {
+const Faq = () => {
     const [openIndex, setOpenIndex] = useState(0)
 
     const toggleFaq = (index) => {
         setOpenIndex(prev => (prev === index ? 0 : index))
     }
 
-    const data = [
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nisl ",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
-    },
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nies",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
-    },
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
-    },
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nisl proin ies",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
-    },
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
-    },
-    {
-      "Question": "Lorem ipsum dapibus dis nisl at nisl proin urna en",
-      "Answer" : "Lorem ipsum dapibus dis nisl at nisl proin urna enim ultricies"
+    const [data, setData] = useState([]);
+
+    useEffect( ()  =>  {    
+      getData();
+    }, [])
+
+    const getData = async () => {
+      const data = await calls.getFaqs();
+      setData(data);
     }
-  ]
-    return (
-        <section className='bg-[#F6F4FF] relative text-black w-screen py-[120px] pb-[250px] flex items-center justify-center'>
+    return   (
+      <>
+      {data.length > 0 ? (
+         <section className='bg-[#F6F4FF] relative text-black w-screen py-[120px] pb-[250px] flex items-center justify-center'>
             <div className='flex items-center z-30 justify-between flex-col gap-[45px]'>
                 <p className='poppins-semibold text-[52px]'>Frequently Asked Questions</p>
 
@@ -80,6 +67,11 @@ const Faq = ({ faq }) => {
           alt="" />
           </div>
         </section>
+      ) : (
+        <div>sukjdn</div>
+      )}
+       
+      </>
     )
 }
 

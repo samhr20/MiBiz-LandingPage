@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { motion } from "motion/react";
 import PlayStore from "../assets/svg/PlayStore.svg?react";
 import AppStore from "../assets/svg/AppStore.svg?react";
 
-const HeroSection = () => {
+const HeroSection = ({ref}) => {
     return (
-        <section
+        <section ref={ref}
             className="relative bg-cover h-screen bg-no-repeat flex z-20 overflow-hidden"
             style={{
                 backgroundImage: "url('/HeroImage.jpg')",
@@ -32,19 +32,19 @@ const HeroSection = () => {
                     <img
                         src="/GetPro.png"
                         alt=""
-                        className="absolute left-[80px] bottom-0 z-20 w-[230px] sm:w-[180px] md:w-[210px] lg:w-[230px] xl:w-[250px]"
+                        className="absolute left-[40px] bottom-0 z-20 w-[230px] sm:w-[180px] md:w-[210px] lg:w-[230px] xl:w-[250px]"
                     />
                     {/* Center phone */}
                     <img
-                        src="/WelcomeBack.png"
+                        src="/Insight.png"
                         alt=""
                         className="relative z-30 w-[260px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] "
                     />
                     {/* Right phone */}
                     <img
-                        src="/GetPro.png"
+                        src="/Prospect.png"
                         alt=""
-                        className="absolute right-[80px] bottom-0 z-20 w-[230px] sm:w-[180px] md:w-[210px] lg:w-[230px] xl:w-[250px]"
+                        className="absolute right-[40px] bottom-0 z-20 w-[230px] sm:w-[180px] md:w-[210px] lg:w-[230px] xl:w-[250px]"
                     />
                 </div>
             </motion.div>

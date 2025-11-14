@@ -4,9 +4,9 @@ import AppStore from '../assets/svg/AppStore.svg?react'
 import GetPro1 from '../assets/svg/GetPro1.svg?react'
 import GetPro2 from '../assets/svg/GetPro2.svg?react'
 
-const About = () => {
+const About = ({ref}) => {
     return (
-        <section className='bg-[#F6F4FF] relative w-screen py-[120px] text-black flex items-center justify-center '>
+        <section ref={ref} className='bg-[#F6F4FF] relative w-screen py-[120px] text-black flex items-center justify-center '>
             <div className='absolute top-0 z-0 w-screen flex items-center  ' >
                 <img src="/Union.png"
                     alt="" />
@@ -19,9 +19,9 @@ const About = () => {
                     
                     <div className='flex flex-col gap-[45px] w-[702px]'>
                         <div className='flex flex-col gap-4'>
-                            <p className='text-[52px] poppins-semibold text-nowrap'>About MyBiz</p>
+                            <p className='text-[52px] poppins-semibold text-nowrap'>About Uplinorr Plus</p>
                             <p className='text-[16px] text-[#4C4C4C] leading-[150%] tracking-normal text-start'>
-                                <strong className='text-black'>“MyBiz Partner”</strong> is your all-in-one digital companion designed to simplify and streamline your 
+                                <strong className='text-black'>"Uplinorr Plus"</strong> is your all-in-one digital companion designed to simplify and streamline your 
                                 <strong className='text-black'> Direct Selling </strong> business journey. <br /> Built for distributors, networkers, and direct sellers, 
                                 the app empowers you to manage your prospects, monitor your orders, track your growth, and stay connected with your team — all from a single dashboard.
                             </p>

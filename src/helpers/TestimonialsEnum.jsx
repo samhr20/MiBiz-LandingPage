@@ -1,9 +1,13 @@
 
 const TestimonialsEnum = {
-      "Stars" : "Stars",
-      "Feedback" : "Feedback",
-      "UserImage" : "UserImage",
-      "UserName" : "UserName"
+      "Rating" : "rating",
+      "Comment" : "comment",
+      "User" : "users",
 }
 
-export default TestimonialsEnum
+const userEnum = {
+      "Name" : "name",
+      "Image" : "image"
+}
+
+export default {TestimonialsEnum, userEnum}

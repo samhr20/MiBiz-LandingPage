@@ -4,23 +4,28 @@ import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
 import { motion } from 'motion/react'
 
+
 const AppPreview = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const swiperRef = useRef(null)
 
+   
+    
+ 
 
     const images = [
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
-        "/InsightCarousel.png",
+        "/app_review/LOGIN.webp",
+        "/app_review/SUBSCRIPTION.webp",
+        "/app_review/INSIGHTS.webp",
+        "/app_review/ADD LEAD.webp",
+        "/app_review/LEADS LIST.webp",
+        "/app_review/CUSTOMER DETAILS.webp",
+        "/app_review/ADD ORDER.webp",
+        "/app_review/NOTIFICATION.webp",
+        "/app_review/MORE.webp",
+        "/app_review/SUPPORT.webp",
+
+
     ]
 
     return (
@@ -38,12 +43,11 @@ const AppPreview = () => {
 
 
                 <div
+                    className=' max-w-[1932px] px-30  relative  '>
 
-                    className=' max-w-[1932px] px-20 relative  '>
-
-                    <div className='absolute left-1/2 -translate-x-[50%] top-2 z-30'>
+                    <div className='absolute left-1/2 -translate-x-[50%] top-1/2 -translate-y-[50%]  z-30'>
                         <img src="/Frame.png"
-                            className={`w-[348px] scale-111 `}
+                            className={` h-[716px] scale-100  `}
                             alt="" />
                     </div>
                     <Swiper
@@ -51,22 +55,23 @@ const AppPreview = () => {
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                         slidesPerView={5}
                         centeredSlides={true}
-                        spaceBetween={30}
+                        spaceBetween={40}
                         modules={[Autoplay]}
                         autoplay={{
                             delay: 1800,
                             disableOnInteraction: false,
                         }}
                         loop={true}
+                        
                     >
                         {images.map((item, index) => (
-                            <SwiperSlide key={index} className="flex justify-center items-center">
+                            <SwiperSlide key={index} >
                                 <img
                                     src={item}
                                     alt=""
-                                    className={`transition-all duration-500 ease-in-out object-cover 
-                ${activeIndex === index ? 'scale-105 opacity-100 z-10' : 'scale-95 opacity-80 z-0'}
-                w-[348px] h-[720px] rounded-[23px]`}
+                                    className={`transition-all duration-500 ease-in-out object-center ${activeIndex === index ? 'rounded-2xl'  :''} 
+                  
+                 h-[680px] `}
                                 />
                             </SwiperSlide>
                         ))}

@@ -1,38 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import axios from 'axios'
+
+// Components
 import Navbar from './Components/Navbar'
 import HeroSection from './Components/HeroSection'
-import VideoSection from './Components/VideoSection'
 import Footer from './Components/Footer'
-import Contact from './Components/Contact'
 import Plans from './Components/Plans'
-import { useEffect } from 'react'
-import axios from 'axios'
 import Features from './Components/Features'
 import Faq from './Components/Faq'
 import About from './Components/About'
 import Testimonials from './Components/Testimonials'
 import AppPreview from './Components/AppPreview'
+import Privacy from './Components/Privacy'
+import Terms from './Components/Terms'
 
 const App = () => {
 
   const [SubPlans, setSubPlans] = useState([])
-  const [Faqs, setFaqs] = useState([])
-  const [Testimonial, setTestimonial] = useState([])
 
   useEffect(() => {
 
     const fetchData = async () => {
       try {
         const plans = await axios.get("http://localhost:3000/subscriptionPlans")
-        const faqs = await axios.get("http://localhost:3000/faq")
-        const testimonials = await axios.get("http://localhost:3000/testimonials")
         setSubPlans(plans.data)
-        setFaqs(faqs.data)
-        setTestimonial(testimonials.data)
-
       } catch (error) {
-        console.error(error);
-
+        return [];
       }
     }
 
@@ -40,35 +34,59 @@ const App = () => {
 
   }, [])
 
+  const HomeRef = useRef()
+  const AboutRef = useRef()
+  const FeatureRef = useRef()
+  const SubscriptionRef = useRef()
+  const ContactUsRef = useRef()
 
-  return (
-    <div className=" poppins ">
+  const ScrollHandler = (refToScroll) => {
+    window.scrollTo({
+      top: refToScroll.current.offsetTop,
+      behavior: 'smooth'
+    })
+  }
 
-      <div className="overflow-x-hidden ">
-        <Navbar />
-        <HeroSection />
-        <About />
-        {/* <VideoSection /> */}
-        <Features />
-        <AppPreview/>
-        <Testimonials Testimonial={Testimonial} />
-        <Plans SubPlans={SubPlans} />
-        <Faq faq={Faqs} />
-        {/* <Contact /> */}
-        <Footer />
-      </div>
+  const HomePage = () => (
+    <>
+      <Navbar
+        ScrollHandler={ScrollHandler}
+        HomeRef={HomeRef}
+        AboutRef={AboutRef}
+        FeatureRef={FeatureRef}
+        SubscriptionRef={SubscriptionRef}
+        ContactUsRef={ContactUsRef}
+      />
 
-
-   
-    </div>
-
-
-
+      <HeroSection ref={HomeRef} />
+      <About ref={AboutRef} />
+      <Features ref={FeatureRef} />
+      <AppPreview />
+      <Testimonials />
+      <Plans SubPlans={SubPlans} ref={SubscriptionRef} />
+      <Faq />
+      <Footer ref={ContactUsRef} ScrollHandler={ScrollHandler}
+        HomeRef={HomeRef}
+        AboutRef={AboutRef}
+        FeatureRef={FeatureRef}
+        SubscriptionRef={SubscriptionRef}
+      />
+    </>
   )
 
+  return (
+    <Router>
+      <div className="poppins overflow-x-hidden">
+        <Routes>
 
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/terms-conditions" element={<Terms />} />
 
-  
+        </Routes>
+      </div>
+    </Router>
+  )
 }
 
 export default App

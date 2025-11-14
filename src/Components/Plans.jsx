@@ -5,7 +5,7 @@ import Bolt from '../assets/svg/Bolt.svg?react'
 import Timer from '../assets/svg/Timer.svg?react'
 import { motion } from 'motion/react'
 
-const Plans = ({ SubPlans }) => {
+const Plans = ({ SubPlans , ref}) => {
 
     const containerVariants = {
         hidden: {},
@@ -49,7 +49,7 @@ const Plans = ({ SubPlans }) => {
   ]
 
     return (
-        <section className='w-screen bg-[#F6F4FF] rounded-3xl py-[120px] flex items-center justify-center'>
+        <section  ref={ref} className='w-screen bg-[#F6F4FF] rounded-3xl py-[120px] flex items-center justify-center'>
             <div className='flex flex-col items-center justify-between gap-8'>
 
                 {/* Heading */}

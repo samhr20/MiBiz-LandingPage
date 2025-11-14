@@ -6,18 +6,18 @@ import Analytics from '../assets/svg/Analytics.svg?react'
 import TeamPerformance from '../assets/svg/TeamPerformance.svg?react'
 import { motion } from 'motion/react'
 
-const Features = () => {
+const Features = ({ref}) => {
 
     const data = [
         {
             title: "Smart Business Dashboard",
             description: `Get a complete 360° view of your business performance through a clean, visual dashboard. Instantly track your total leads, active prospects, sales conversions, income progress, and repurchase analytics — all in one place. <br/> The dashboard automatically updates in real-time, helping you stay on top of every goal and monitor your team’s activities without switching between multiple tools. It’s your command center for building a stronger business network.`,
-            image: "/Insight.png"
+            image: "/InsightFeatures.png"
         },
         {
             title: "Prospect Management",
             description: `Say goodbye to messy spreadsheets and missed opportunities. Manage every prospect efficiently — from first contact to conversion.<br/> With built-in follow-up reminders, activity notes, and engagement history, you’ll never forget a potential customer again.<br/> The system intelligently prioritizes your leads, helping you focus on people who are more likely to join or repurchase, ensuring maximum growth for your business.`,
-            image: "/Prospect.png"
+            image: "/ProspectFeatures.png"
         },
         {
             title: "Repurchase Tracker",
@@ -26,13 +26,13 @@ const Features = () => {
         },
         {
             title: "Real-time Notifications & Updates",
-            description:  `Stay informed with instant notifications about every important business event — from new orders and payments to reminders, offers, and team achievements.<br/> Receive both individual and global announcements directly in the app without needing any external communication tools.<br/> Whether you’re managing your business solo or leading a team, MyBiz Partner ensures you never miss a single update that matters.`,
+            description:  `Stay informed with instant notifications about every important business event — from new orders and payments to reminders, offers, and team achievements.<br/> Receive both individual and global announcements directly in the app without needing any external communication tools.<br/> Whether you’re managing your business solo or leading a team, Uplinorr Plus ensures you never miss a single update that matters.`,
             image: "/RealTimeUpdates.png"
         }
     ]
 
     return (
-        <section className='bg-[#F6F4FF] py-[120px] px-60 flex flex-col items-center relative'>
+        <section ref={ref} className='bg-[#F6F4FF] py-[120px] px-60 flex flex-col items-center relative'>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

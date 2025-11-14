@@ -1,7 +1,8 @@
 
 const FaqsEnum = {
-    "Question": "Question",
-    "Answer": "Answer"
+    "Question": "question",
+    "Answer": "answer",
+    "Id" : "id"
 }
 
 export default FaqsEnum
